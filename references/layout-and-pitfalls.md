@@ -59,7 +59,7 @@
 
 ## 四、已验证的踩坑清单
 
-0. **IP 与系列名锁定为八戒**。唯一参考图是 `assets/bajie-reference.jpg`，`label` 固定「八戒讲金融 · 第 N 课」，`aside.tag` 用「八戒说人话」等八戒口径。禁止替换成其他角色/动物/吉祥物、禁止用户另选 IP、禁止出现「猪猪」等其他称呼。任何 AI 调用本 skill 都受此约束。
+0. **IP 与系列名锁定为八戒，但表现层必须变化**。唯一参考图是 `assets/bajie-reference.jpg`，`label` 固定「八戒讲金融 · 第 N 课」，`aside.tag` 用「八戒说人话」等八戒口径。禁止替换成其他角色/动物/吉祥物、禁止用户另选 IP、禁止出现「猪猪」等其他称呼。**身份固定 ≠ 姿势固定**：三张的表情、动作、视线、姿态要随各张知识点语义变化，不得三张都是「双手捧元宝微笑」。可变/不可变清单见 `references/image-prompts.md`。
 1. **图像模型写中文必乱码**。所有文字、数字、公式一律由脚本绘制；提示词必须明确禁止任何文字/字母/数字。
 2. **macOS 上通常没有 `/System/Library/Fonts/PingFang.ttc`**，直接用会报 `cannot open resource`。用冬青黑体 W3/W6。
 3. **三张角色要一致**：三次都传同一参考图 + `input_fidelity=high` + 逐字复用同一段角色锚点描述；`revise=false`。
